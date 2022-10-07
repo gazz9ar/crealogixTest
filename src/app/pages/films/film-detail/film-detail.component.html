@@ -1,0 +1,17 @@
+<ng-container *ngIf="film$ | async as film">
+	<div class="film-detail">
+		<p><strong>Title:</strong>  {{film.title}}</p>
+		<p><strong>Episode_id:</strong>  {{film.episode_id}}</p>
+		<p><strong>Opening_crawl:</strong>  {{film.opening_crawl}}</p>
+		<p><strong>Director:</strong> {{film.director}}</p>
+		<p><strong>Producer:</strong> {{film.producer}}</p>
+		<a [routerLink]="'/films'">Go back</a>
+	</div>	
+
+</ng-container>
+<ng-container *ngIf="isLoading">
+	<div class='spinner'></div>
+</ng-container>
+
+
+
