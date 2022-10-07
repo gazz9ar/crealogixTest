@@ -28,10 +28,8 @@ const routes: Routes = [
 		path:'starships',
 		component:InProgressComponent
 	},
-	{
-		path:'**',
-		redirectTo:'home',	
-	}
+	{ path: "", redirectTo: "home", pathMatch: "full" },
+	{ path: "**", redirectTo: "home", pathMatch: "full" },
 ];
 
 @NgModule({
