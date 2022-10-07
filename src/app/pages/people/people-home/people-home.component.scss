@@ -1,0 +1,9 @@
+.people-list {
+	list-style: none;
+	margin-left: 25px;
+}
+.person-container {
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

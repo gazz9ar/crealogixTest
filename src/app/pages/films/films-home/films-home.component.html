@@ -1,7 +1,7 @@
 <ul class="films-list">
 	<li *ngFor="let film of films$ | async as films" >
 		<div class="film-container" >
-			<p>{{film.title}} /</p>
+			<p><strong>{{film.title}}</strong>  /</p>
 			<p>{{film.director}} /</p>
 			<p>{{film.release_date}} /</p>
 			<a [routerLink]="[film.episode_id]">More details</a>

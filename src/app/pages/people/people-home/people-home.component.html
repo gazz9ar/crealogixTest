@@ -1,0 +1,13 @@
+<ul class="people-list">
+	<li *ngFor="let person of people$ | async as people" >
+		<div class="person-container" >
+			<p><strong>{{person.name}}</strong>  /</p>
+			<p>{{person.height | personHeight}} Height /</p>
+			<p> Appeared in <strong>{{person.films.length}}</strong> films /</p>
+			<a [routerLink]="[person.url.charAt(person.url.length - 2)]">More details</a>
+		</div>				
+	</li>
+</ul>
+<ng-container *ngIf="isLoading">
+	<div class='spinner'></div>
+</ng-container>

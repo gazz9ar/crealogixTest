@@ -1,0 +1,16 @@
+<ng-container *ngIf="person$ | async as person">
+	<div class="person-detail">
+		<p><strong>Name:</strong>  {{person.name}}</p>
+		<p><strong>Height:</strong>  {{person.height | personHeight}}</p>
+		<p><strong>Mass:</strong>  {{person.mass}}</p>
+		<p><strong>Films:</strong> {{person.films.length}}</p>		
+		<a [routerLink]="'/people'">Go back</a>
+	</div>	
+
+</ng-container>
+<ng-container *ngIf="isLoading">
+	<div class='spinner'></div>
+</ng-container>
+
+
+

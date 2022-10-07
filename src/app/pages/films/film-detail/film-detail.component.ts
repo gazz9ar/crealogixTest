@@ -26,8 +26,7 @@ export class FilmDetailComponent implements OnInit {
 	this.isLoading = true;
 	this.film$ = this.route.params.pipe(
 		switchMap( (routeParam) => {					
-			return this.filmsService.getFilm(routeParam['filmId'])
-			
+			return this.filmsService.getFilm(routeParam['filmId'])			
 			.pipe(
 				map(film => ({
 					...film,
